@@ -7,3 +7,5 @@ void clearScreen(void);
 void gotoXY(int x, int y);
 void setFGcolor(int c);
 void resetColors(void);
+
+// this line is added by Visual Studio (local repo)
