@@ -1,5 +1,4 @@
 #define _CRT_SECURE_NO_WARNINGS
-#include <time.h>
 #include "pascal.h"
 #include <stdlib.h>
 #include <stdio.h>
@@ -9,9 +8,7 @@ int main(void) {
 	int row;
 	printf("Pascal triangle, enter the number of rows: ");
 	scanf("%d", &row);
-	int a[100] = {1};
-	pascal_by_shoulder_add(a, row, 0);
-/*	setBGcolor(BLACK);
+	setBGcolor(BLACK);
 	clearScreen();
 	srand(time(NULL));
 	for(int i = 0; i < row; i++) {
@@ -21,6 +18,6 @@ int main(void) {
 			printf("%4d", n_choose_k(i, j));
 		}
 		printf("\n");
-	}*/
+	}
 	printf("\x1b[0m");
 }
