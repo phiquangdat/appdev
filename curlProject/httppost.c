@@ -8,8 +8,8 @@ int main(void){
 	CURLcode res = curl_global_init(CURL_GLOBAL_ALL);
 	if(res) return (int)res;
 	printf("Type in name: ");
-	printf("Type in project: ");
 	scanf("%s", name);
+	printf("Type in project: ");
 	scanf("%s", project);
 	sprintf(postfields, "project=%s&name=%s", project, name);
 	curl = curl_easy_init();
