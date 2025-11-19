@@ -12,7 +12,7 @@ void send_data(rock r){
 
 	curl = curl_easy_init();
 	if (curl){
-		curl_easy_setopt(curl, CURLOPT_URL, "http://www.cc.puv.fi/~gc/php/test.php");
+		curl_easy_setopt(curl, CURLOPT_URL, "http://www.cc.puv.fi/~e2401782/test.php");
 		curl_easy_setopt(curl, CURLOPT_POSTFIELDS, poststr);
 		
 		res = curl_easy_perform(curl);
