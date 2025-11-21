@@ -7,6 +7,7 @@ int main(void){
 	rock r;
 	printf("Application Development Rock!\n");
 	printf("Enter your name: ");
+	srand(time(NULL));
 	scanf("%s", r.rname);
 	r.max = rand() % 50 + 51;
 	r.min = rand() % 50 + 1;
