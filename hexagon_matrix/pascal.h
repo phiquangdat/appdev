@@ -3,6 +3,8 @@
 // constant declarations, struct/class definitions, function declarations
 
 // function declarations
+#include <stdio.h>
 int factorial(int n);
 int n_choose_k(int n, int k);
-void pascal_by_shoulder_add(int a[], int row, int current_row);
+void hexagon_matrix(int n, int current_row, int *index, int *numbers, int total_numbers, FILE *fp);
+int random_number(int position, int total_numbers);
