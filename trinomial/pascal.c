@@ -1,8 +1,5 @@
-<<<<<<< HEAD
-=======
 #include <stdio.h>
 #include "screen.h"
->>>>>>> bb6fe80 (Implementation for Trinomial)
 // function definition
 int factorial(int n) {
 	if (n == 0) return 1; 

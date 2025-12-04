@@ -3,6 +3,7 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include "screen.h"
+#include <time.h>
 
 int main(void) {
 	int row;
