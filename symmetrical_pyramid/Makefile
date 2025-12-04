@@ -1,5 +1,5 @@
-OBJ = main.o screen.o pascal.o
-APPNAME = pascal.out
+OBJ = main.o screen.o pyramid.o
+APPNAME = pyramid.out
 
 $(APPNAME) : $(OBJ)
 	gcc -o $(APPNAME) $(OBJ)
