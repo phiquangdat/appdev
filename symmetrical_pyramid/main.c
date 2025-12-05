@@ -2,21 +2,17 @@
 #include "pascal.h"
 #include <stdlib.h>
 #include <stdio.h>
-#include "screen.h"
 #include <time.h>
 
 int main(void) {
 	int row;
-	printf("Pascal triangle, enter the number of rows: ");
+	fprintf(stderr, "Enter size of pyramid ");
 	scanf("%d", &row);
-
-	srand(time(NULL));
 	
-	int* numbers = (int*)malloc((2 * row - 1) * sizeof(int));
+	int numbers[MAX_SIZE];
 	numbers[0] = row;
 	
-	FILE *fp = fopen("symmetrical_pyramid.txt", "w");
-	pyramid(row, 1, numbers, fp);	
-
-	printf("\x1b[0m");
+	FILE *fp = fopen("pyramid.txt", "w");
+	pyramid(row, 1, numbers);	
+	fclose(fp);
 }
