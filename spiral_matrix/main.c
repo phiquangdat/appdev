@@ -2,22 +2,20 @@
 #include "spiral_matrix.h"
 #include <stdlib.h>
 #include <stdio.h>
-#include <time.h>
-#include <math.h>
 
 int main(void) {
 	int row;
-	printf("Enter size of matrix: ");
+	fprintf(stderr, "Enter size of matrix (max %d): ", MAX_SIZE);
 	scanf("%d", &row);
 
-	srand(time(NULL));
-	int** numbers = (int**)malloc(row * sizeof(int*));
-	for(int i = 0; i < row; i++) {
-		numbers[i] = (int*)malloc(row * sizeof(int));
-	}
-	
-	FILE *fp = fopen("spiral_matrix.txt", "w");
-	spiral_matrix(row, numbers, fp);	
+	int numbers[MAX_SIZE][MAX_SIZE];
 
-	printf("\x1b[0m");
+	FILE *fp = fopen("spiral_matrix.txt", "w");
+	if (fp == NULL) {
+        printf("Error opening file.\n");
+        return 1;
+    }
+
+	spiral_matrix(row, numbers);	
+	fclose(fp);
 }
