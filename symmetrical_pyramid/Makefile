@@ -1,5 +1,6 @@
-OBJ = main.o screen.o pyramid.o
+OBJ = main.o pyramid.o
 APPNAME = pyramid.out
+TARGET = pyramid.txt
 
 $(APPNAME) : $(OBJ)
 	gcc -o $(APPNAME) $(OBJ)
@@ -9,3 +10,6 @@ $(APPNAME) : $(OBJ)
 
 clean :
 	rm $(OBJ) $(APPNAME)
+
+print: $(APPNAME)
+	./$(APPNAME) > ${TARGET}
